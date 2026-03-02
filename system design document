@@ -1,0 +1,23 @@
+DriverPass System Design Document
+1. Introduction
+This system design document presents a complete technical design for the DriverPass system. It expands upon the approved business requirements and provides UML models and technical specifications that clearly communicate system behavior and structure to both technical and nontechnical stakeholders.
+2. UML Diagrams
+2.1 Use Case Diagram
+The use case diagram identifies all system actors and their interactions with DriverPass. Students access training materials, take practice tests, and schedule lessons. Administrators manage users, schedules, instructors, and content. Instructors view and update assigned lessons. This diagram confirms that the system fulfills all functional requirements defined in Project One.
+2.2 Activity Diagram: Schedule Driving Lesson
+This activity diagram demonstrates the complete workflow for scheduling a driving lesson. It includes authentication, eligibility validation, availability checks, booking confirmation, and error handling. The workflow ensures accurate scheduling and prevents conflicts.
+2.3 Activity Diagram: Take Practice Test
+This activity diagram illustrates the process for completing a practice test. It shows how questions are presented, answers recorded, tests graded, results stored, and feedback delivered. This supports DriverPass’s instructional objectives.
+2.4 Sequence Diagram
+The sequence diagram details the communication between the user interface, scheduling service, and database during lesson scheduling. It confirms correct message flow and data handling.
+2.5 Class Diagram
+The class diagram defines the core system classes, attributes, and relationships. It includes users, packages, appointments, tests, results, payments, and training content. This structure supports data integrity, scalability, and maintainability.
+3. Technical Requirements
+The DriverPass system requires a web-based architecture with secure authentication, role-based access control, reliable database storage, and scalable hosting infrastructure. It must meet functional and nonfunctional requirements including security, performance, availability, usability, and reliability.
+4. Security Requirements
+Security controls include encrypted communications, secure credential storage, role-based permissions, input validation, session management, and regular backups. These measures protect sensitive user and scheduling data.
+5. System Limitations
+The system requires internet access and accurate data maintenance. Some features may be deployed in phases based on cost and timeline constraints. These limitations are consistent with the project scope.
+6. Conclusion
+This system design fully satisfies the DriverPass project requirements. The UML diagrams and technical specifications provide a clear, complete blueprint for development and future system expansion.
+
