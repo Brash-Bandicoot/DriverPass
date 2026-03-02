@@ -1,0 +1,138 @@
+
+ 
+CS 255 Business Requirements Document 
+
+System Components and Design
+Purpose
+•	DriverPass needs a system that supports online practice exams/classes and on-the-road driving lesson scheduling.
+•	The goal of this project is to design a web-based, cloud-hosted system that:
+o	Supports multiple roles (customers, secretary, IT officer, owner/management)
+o	Allow students to schedule, change, and cancel lessons online.
+o	Tracks progress on practice tests and lesson history
+o	Offers reports that can be printed or exported in formats compatible with Excel.
+o	Tracks user actions for accountability (audit history)
+________________________________________
+System Background
+•	DriverPass observes that a considerable number of students do not pass the DMV test, often because they rely on outdated practice exams rather than mastering current regulations and practical driving abilities.
+•	DriverPass’s solution is a combined service offering:
+o	Online learning (classes and practice tests)
+o	Behind-the-wheel training (two-hour driving sessions with trainers, using DriverPass vehicles)
+•	The system must include components for:
+o	User account management and role permissions
+o	Package registration and management (Packages 1–3; ability to disable a package)
+o	Reservation scheduling tied to drivers and vehicles.
+o	Online test tracking and progress dashboards
+o	Driver notes / lesson history
+o	Reporting and exports
+o	Audit logging and activity reporting.
+o	DMV update notification process (so content stays current)
+________________________________________
+Objectives and Goals
+•	The system shall allow customers to create and manage accounts, including password resets.
+•	The system shall allow customers to schedule, cancel, and modify two-hour driving lessons online.
+•	The system shall allow the secretary to schedule lessons for customers (phone/in-office).
+•	The system shall record reservations with customer, date, start time, end time, assigned driver, and assigned car.
+•	The system shall support three training packages and allow management to disable packages from first-time registration.
+•	The system shall track practice tests with test name, time taken, score, and status (not taken, in progress, failed, passed).
+•	The system should store and display driver notes and lesson history.
+•	The system should provide printable/exportable reports, including activity reports.
+•	The system shall maintain an audit trail of reservation changes and record updates.
+•	The system must provide notifications whenever DMV rules or questions are updated to ensure training remains up to date.
+________________________________________
+Nonfunctional Requirements
+Performance Requirements
+•	The system should be web-based and accessible on both desktop and mobile browsers.
+•	The system shall support multiple concurrent users (students, staff, admin).
+•	The system shall load key pages (login, schedule, test dashboard) within reasonable response times under normal load.
+•	The system should support routine updates to test content when DMV information changes.
+•	The system shall generate reports and exports within a reasonable period.
+________________________________________
+Platform Constraints
+•	The system should be hosted in a cloud environment to reduce DriverPass responsibility for backups and security.
+•	The system should run on modern browsers (Chrome, Edge, Safari, Firefox).
+•	The system shall support access from computers and mobile devices.
+•	The system shall store data in a database (users/roles, packages, reservations, drivers/cars, tests/results, driver notes, audit logs).
+•	The system shall support exporting reports into formats compatible with Excel.
+________________________________________
+Accuracy and Precision
+•	The system shall uniquely identify each user with a unique account identifier.
+•	The system shall validate user input for registration, scheduling, and updates.
+•	The system shall enforce lesson duration as two-hour sessions and store accurate start/end times.
+•	The system shall prevent double-booking of drivers and cars in the same time slot.
+•	The system shall notify authorized users when conflicts or critical errors occur.
+•	The system shall record audit logs accurately (user, action, timestamp, record affected).
+________________________________________
+Adaptability
+•	The system shall allow the IT officer to reset passwords and disable accounts as needed.
+•	The system shall allow management to disable a package so new customers cannot register for it.
+•	The system should support updates to training content and practice tests when DMV information changes.
+•	The system shall support future enhancements without requiring a full redesign of the system foundation.
+________________________________________
+Security
+•	The system should require authentication for any account-specific functions.
+•	The system shall enforce role-based access control:
+o	Customer: schedule/cancel/modify their own reservations; take tests; view progress/results
+o	Secretary: schedule/cancel/modify reservations for customers; view schedules
+o	IT Officer: full administrative access for user management and access control
+o	Owner/Management: access reports, schedules, and oversight data
+•	The system should provide a secure password reset process for customers.
+•	The system should protect sensitive customer and employee data using least privilege of access.
+•	The system shall log key actions for accountability (reservation actions and record changes).
+________________________________________
+Functional Requirements
+•	The system allows customers to register an account with personal and contact information.
+•	The system shall allow customers to select a training package during registration.
+•	The system shall allow management to disable packages so new customers cannot register for them.
+•	The system allows customers to schedule two-hour driving lesson reservations online.
+•	The system allows customers to cancel and modify their reservations online.
+•	The system shall allow the secretary to schedule, cancel, and modify reservations on behalf of customers.
+•	The system shall store reservation details including date, start time, end time, customer, assigned driver, and assigned car.
+•	The system shall prevent double-booking of drivers or cars for the same date/time slot.
+•	The system shall provide online practice tests and record results including score, time taken, and status.
+•	The system shall display practice test progress and history for each customer.
+•	The system shall store driver notes and lesson history tied to lessons.
+•	The system shall generate reports for authorized users, including activity reports and scheduling reports.
+•	The system shall log user activity for reservation creation, modification, and cancellation, including who performed each action and when.
+•	The system should notify authorized staff when DMV updates occur so content can be reviewed and updated.
+________________________________________
+User Interface
+•	The system should provide a web-based interface that is easy to use and mobile-friendly.
+•	The system shall include pages for:
+o	Login/logout
+o	Registration and package selection
+o	Password reset
+o	Scheduling calendar and time selection
+o	Reservation management (view, cancel, modify)
+o	Practice test dashboard (test name, time taken, score, status)
+o	Lesson history and driver notes display
+o	Staff scheduling tools for secretary/admin roles.
+o	Reporting page (print/export)
+o	Contact page for contacting DriverPass and contacting customers.
+________________________________________
+Assumptions
+•	Users must be online to schedule, modify, or cancel reservations and to take practice tests.
+•	DriverPass will keep driver and vehicle availability information current in the system.
+•	DMV updates will be available through a process DriverPass can access (manual or integrated).
+•	Payment processing should be managed through a secure payment processor rather than storing raw credit card data directly in the system.
+________________________________________
+Limitations
+•	Offline scheduling/editing is not supported due to the risk of conflicting or duplicating records.
+•	Full package customization (adding/removing package modules without developer involvement) is out of scope for the current release; disabling a package is sufficient.
+•	The DMV update method depends on DMV capabilities and DriverPass access.
+•	Time, staffing, and budget constraints may limit features beyond the core scheduling/testing/tracking requirements.
+________________________________________
+Gantt Chart
+ 
+Schedule
+•	Collect Requirements: 22-Jan to 4-Feb
+•	Create Use Case Diagrams: 11-Feb to 18-Feb
+•	Build Activity Diagrams for Each Use Case: 15-Feb to 9-Mar
+•	Research User Interface Designs: 27-Feb to 7-Mar
+•	Build Class Diagram: 1-Mar to 9-Mar
+•	Get Customer Approval: 10-Mar to 11-Mar
+•	Build Interface: 12-Mar to 24-Mar
+•	Link DB to Interface: 24-Mar to 3-Apr
+•	Build Business Logic: 5-Apr to 27-Apr
+•	Test System: 27-Apr to 7-May
+•	Deliver System: 8-May to 9-May
+•	Sign-off Meeting: 9-May to 10-May
